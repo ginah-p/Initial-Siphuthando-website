@@ -438,6 +438,20 @@ p {
     font-size: 1.7rem;
 }
 
+.location-icon {
+    width: 27px;
+    height: 27px;
+    flex: 0 0 27px;
+    display: inline-flex;
+    align-items: flex-start;
+}
+
+.location-icon svg {
+    width: 27px;
+    height: 27px;
+    fill: currentColor;
+}
+
 .contact-item h3 {
     color: var(--green);
     margin-bottom: 5px;
