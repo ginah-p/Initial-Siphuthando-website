@@ -1,0 +1,597 @@
+
+/* =================================
+   SIPHUTHANDO HBC WEBSITE
+   Main stylesheet
+================================= */
+
+:root {
+    --green: #315c43;
+    --dark-green: #244331;
+    --burgundy: #853c32;
+    --gold: #d5a64a;
+    --cream: #f8f4ec;
+    --white: #ffffff;
+    --text: #343b35;
+    --muted: #70766f;
+
+    --heading-font: "Playfair Display", serif;
+    --body-font: "DM Sans", sans-serif;
+}
+
+/* RESET */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1150px, 90%);
+    margin: auto;
+}
+
+.section {
+    padding: 90px 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+p {
+    color: var(--muted);
+}
+
+/* NAVIGATION */
+
+.header {
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.navbar {
+    min-height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    color: var(--green);
+    font-size: 1.2rem;
+}
+
+.brand img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.brand small {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--muted);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+.nav-contact {
+    background: var(--green);
+    color: white !important;
+    padding: 12px 20px;
+    border-radius: 6px;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--green);
+    cursor: pointer;
+}
+
+/* BUTTONS */
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn-primary {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-primary:hover {
+    background: var(--dark-green);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border: 1px solid var(--green);
+    color: var(--green);
+}
+
+.btn-outline:hover {
+    background: var(--green);
+    color: var(--white);
+}
+
+.btn-light {
+    background: var(--white);
+    color: var(--green);
+}
+
+.btn-light:hover {
+    background: var(--cream);
+}
+
+/* HERO */
+
+.hero {
+    background: var(--cream);
+    padding: 75px 0;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.eyebrow {
+    color: var(--burgundy);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(2.7rem, 5vw, 4.3rem);
+    margin-bottom: 22px;
+    color: var(--dark-green);
+}
+
+.hero h1 span {
+    color: var(--burgundy);
+}
+
+.hero-text > p {
+    max-width: 520px;
+    margin-bottom: 30px;
+    font-size: 1.05rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 180px 180px 12px 12px;
+}
+
+/* INTRODUCTION */
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: start;
+}
+
+.intro h2 {
+    color: var(--dark-green);
+}
+
+.intro-text p {
+    margin-bottom: 18px;
+}
+
+.text-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--green);
+    font-weight: 700;
+}
+
+/* MISSION AND VISION */
+
+.values {
+    background: var(--cream);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.value-card {
+    background: var(--white);
+    padding: 35px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--gold);
+}
+
+.value-icon {
+    font-size: 2rem;
+    color: var(--burgundy);
+}
+
+.value-card h3 {
+    margin: 15px 0;
+    font-size: 1.5rem;
+    color: var(--green);
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 45px;
+}
+
+.section-heading h2 {
+    color: var(--dark-green);
+    margin-bottom: 15px;
+}
+
+/* SERVICES */
+
+.services {
+    background: var(--white);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-card {
+    padding: 30px;
+    border: 1px solid #e8e5dd;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+.service-icon {
+    color: var(--burgundy);
+    font-size: 2rem;
+}
+
+.service-card h3 {
+    margin: 15px 0 10px;
+    color: var(--green);
+    font-size: 1.3rem;
+}
+
+/* INCLUSION */
+
+.inclusion {
+    background: var(--cream);
+}
+
+.inclusion-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+    align-items: center;
+}
+
+.inclusion-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.inclusion-content h2 {
+    color: var(--dark-green);
+    margin-bottom: 20px;
+}
+
+.inclusion-content p {
+    margin-bottom: 18px;
+}
+
+.inclusion-content .btn {
+    margin-top: 10px;
+}
+
+/* DONATIONS */
+
+.donations {
+    background: var(--green);
+    color: var(--white);
+    text-align: center;
+}
+
+.donation-content {
+    max-width: 800px;
+}
+
+.donations .eyebrow {
+    color: var(--gold);
+}
+
+.donations h2 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.donations p {
+    color: #e7ede8;
+    margin-bottom: 15px;
+}
+
+.donation-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.donation-link {
+    color: var(--white);
+    font-weight: 700;
+}
+
+.donations small {
+    color: #e7ede8;
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.contact-item > span {
+    color: var(--burgundy);
+    font-size: 1.7rem;
+}
+
+.contact-item h3 {
+    color: var(--green);
+    margin-bottom: 5px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* FOOTER */
+
+.footer {
+    background: #20392a;
+    color: var(--white);
+    padding-top: 60px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 45px;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 18px;
+}
+
+.footer p {
+    color: #d1ddd3;
+    margin-bottom: 10px;
+}
+
+.footer a {
+    display: block;
+    color: #d1ddd3;
+    margin-bottom: 10px;
+}
+
+.footer a:hover {
+    color: var(--gold);
+}
+
+.copyright {
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    padding: 20px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+    background: #218c55;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 50px;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: var(--white);
+        padding: 25px 5%;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hero-content,
+    .intro-grid,
+    .inclusion-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-image img {
+        height: 380px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .section {
+        padding: 65px 0;
+    }
+
+    .hero {
+        padding: 55px 0;
+    }
+
+    .hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-image img {
+        height: 320px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .donation-actions {
+        flex-direction: column;
+    }
+
+    .whatsapp-button {
+        bottom: 15px;
+        right: 15px;
+    }
+}
